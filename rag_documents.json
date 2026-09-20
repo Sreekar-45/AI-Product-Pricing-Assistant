@@ -1,0 +1,184 @@
+[
+  {
+    "text": "Product: Gift Card. Variant: $10. Price: 10.00 USD. Inventory: 0 units.",
+    "product": "Gift Card",
+    "variant": "$10",
+    "price": "10.00",
+    "inventory": 0
+  },
+  {
+    "text": "Product: Gift Card. Variant: $25. Price: 25.00 USD. Inventory: 0 units.",
+    "product": "Gift Card",
+    "variant": "$25",
+    "price": "25.00",
+    "inventory": 0
+  },
+  {
+    "text": "Product: Gift Card. Variant: $50. Price: 50.00 USD. Inventory: 0 units.",
+    "product": "Gift Card",
+    "variant": "$50",
+    "price": "50.00",
+    "inventory": 0
+  },
+  {
+    "text": "Product: Gift Card. Variant: $100. Price: 100.00 USD. Inventory: 0 units.",
+    "product": "Gift Card",
+    "variant": "$100",
+    "price": "100.00",
+    "inventory": 0
+  },
+  {
+    "text": "Product: The Inventory Not Tracked Snowboard. Variant: Default Title. Price: 949.95 USD. Inventory: 0 units.",
+    "product": "The Inventory Not Tracked Snowboard",
+    "variant": "Default Title",
+    "price": "949.95",
+    "inventory": 0
+  },
+  {
+    "text": "Product: The Minimal Snowboard. Variant: Default Title. Price: 885.95 USD. Inventory: 50 units.",
+    "product": "The Minimal Snowboard",
+    "variant": "Default Title",
+    "price": "885.95",
+    "inventory": 50
+  },
+  {
+    "text": "Product: The Archived Snowboard. Variant: Default Title. Price: 629.95 USD. Inventory: 50 units.",
+    "product": "The Archived Snowboard",
+    "variant": "Default Title",
+    "price": "629.95",
+    "inventory": 50
+  },
+  {
+    "text": "Product: The Complete Snowboard. Variant: Ice. Price: 699.95 USD. Inventory: 10 units.",
+    "product": "The Complete Snowboard",
+    "variant": "Ice",
+    "price": "699.95",
+    "inventory": 10
+  },
+  {
+    "text": "Product: The Complete Snowboard. Variant: Dawn. Price: 699.95 USD. Inventory: 10 units.",
+    "product": "The Complete Snowboard",
+    "variant": "Dawn",
+    "price": "699.95",
+    "inventory": 10
+  },
+  {
+    "text": "Product: The Complete Snowboard. Variant: Powder. Price: 699.95 USD. Inventory: 10 units.",
+    "product": "The Complete Snowboard",
+    "variant": "Powder",
+    "price": "699.95",
+    "inventory": 10
+  },
+  {
+    "text": "Product: The Complete Snowboard. Variant: Electric. Price: 699.95 USD. Inventory: 10 units.",
+    "product": "The Complete Snowboard",
+    "variant": "Electric",
+    "price": "699.95",
+    "inventory": 10
+  },
+  {
+    "text": "Product: The Complete Snowboard. Variant: Sunset. Price: 699.95 USD. Inventory: 10 units.",
+    "product": "The Complete Snowboard",
+    "variant": "Sunset",
+    "price": "699.95",
+    "inventory": 10
+  },
+  {
+    "text": "Product: The Videographer Snowboard. Variant: Default Title. Price: 885.95 USD. Inventory: 50 units.",
+    "product": "The Videographer Snowboard",
+    "variant": "Default Title",
+    "price": "885.95",
+    "inventory": 50
+  },
+  {
+    "text": "Product: The Compare at Price Snowboard. Variant: Default Title. Price: 785.95 USD. Inventory: 10 units.",
+    "product": "The Compare at Price Snowboard",
+    "variant": "Default Title",
+    "price": "785.95",
+    "inventory": 10
+  },
+  {
+    "text": "Product: The Out of Stock Snowboard. Variant: Default Title. Price: 885.95 USD. Inventory: 0 units.",
+    "product": "The Out of Stock Snowboard",
+    "variant": "Default Title",
+    "price": "885.95",
+    "inventory": 0
+  },
+  {
+    "text": "Product: The Draft Snowboard. Variant: Default Title. Price: 2629.95 USD. Inventory: 20 units.",
+    "product": "The Draft Snowboard",
+    "variant": "Default Title",
+    "price": "2629.95",
+    "inventory": 20
+  },
+  {
+    "text": "Product: Selling Plans Ski Wax. Variant: Selling Plans Ski Wax. Price: 24.95 USD. Inventory: 10 units.",
+    "product": "Selling Plans Ski Wax",
+    "variant": "Selling Plans Ski Wax",
+    "price": "24.95",
+    "inventory": 10
+  },
+  {
+    "text": "Product: Selling Plans Ski Wax. Variant: Special Selling Plans Ski Wax. Price: 49.95 USD. Inventory: 10 units.",
+    "product": "Selling Plans Ski Wax",
+    "variant": "Special Selling Plans Ski Wax",
+    "price": "49.95",
+    "inventory": 10
+  },
+  {
+    "text": "Product: Selling Plans Ski Wax. Variant: Sample Selling Plans Ski Wax. Price: 9.95 USD. Inventory: 10 units.",
+    "product": "Selling Plans Ski Wax",
+    "variant": "Sample Selling Plans Ski Wax",
+    "price": "9.95",
+    "inventory": 10
+  },
+  {
+    "text": "Product: The Hidden Snowboard. Variant: Default Title. Price: 749.95 USD. Inventory: 50 units.",
+    "product": "The Hidden Snowboard",
+    "variant": "Default Title",
+    "price": "749.95",
+    "inventory": 50
+  },
+  {
+    "text": "Product: The Collection Snowboard: Hydrogen. Variant: Default Title. Price: 600.00 USD. Inventory: 50 units.",
+    "product": "The Collection Snowboard: Hydrogen",
+    "variant": "Default Title",
+    "price": "600.00",
+    "inventory": 50
+  },
+  {
+    "text": "Product: The Multi-location Snowboard. Variant: Default Title. Price: 729.95 USD. Inventory: 100 units.",
+    "product": "The Multi-location Snowboard",
+    "variant": "Default Title",
+    "price": "729.95",
+    "inventory": 100
+  },
+  {
+    "text": "Product: The 3p Fulfilled Snowboard. Variant: Default Title. Price: 2629.95 USD. Inventory: 20 units.",
+    "product": "The 3p Fulfilled Snowboard",
+    "variant": "Default Title",
+    "price": "2629.95",
+    "inventory": 20
+  },
+  {
+    "text": "Product: The Multi-managed Snowboard. Variant: Default Title. Price: 629.95 USD. Inventory: 100 units.",
+    "product": "The Multi-managed Snowboard",
+    "variant": "Default Title",
+    "price": "629.95",
+    "inventory": 100
+  },
+  {
+    "text": "Product: The Collection Snowboard: Oxygen. Variant: Default Title. Price: 1025.00 USD. Inventory: 50 units.",
+    "product": "The Collection Snowboard: Oxygen",
+    "variant": "Default Title",
+    "price": "1025.00",
+    "inventory": 50
+  },
+  {
+    "text": "Product: The Collection Snowboard: Liquid. Variant: Default Title. Price: 749.95 USD. Inventory: 50 units.",
+    "product": "The Collection Snowboard: Liquid",
+    "variant": "Default Title",
+    "price": "749.95",
+    "inventory": 50
+  }
+]

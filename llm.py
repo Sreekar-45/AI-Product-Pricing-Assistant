@@ -1,37 +1,45 @@
 import os
-from groq import Groq
+
 from dotenv import load_dotenv
+from groq import Groq
 
 load_dotenv()
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
-def generate_answer(question, product_data):
+def generate_answer(question, retrieved_documents, verified_product_info):
+    context = "\n".join(
+        document["text"]
+        for document in retrieved_documents
+    )
+
     prompt = f"""
-You are a helpful Shopify product assistant.
+You are an AI Product and Pricing Assistant for a Shopify store.
 
-Answer the customer's question using ONLY the verified product information below.
+Answer the user's question using ONLY the verified product information
+and retrieved context provided below.
 
-Product information:
-{product_data}
+Retrieved product context:
+{context}
 
-Customer question:
+Verified product information:
+{verified_product_info}
+
+User question:
 {question}
 
 Rules:
-- Do not invent products, prices, discounts, or inventory.
-- Use the provided price and inventory information exactly.
-- Give a concise natural answer in 1-2 sentences.
+- Do not invent products, variants, prices, discounts, or inventory.
+- Use the verified product information for price and inventory.
+- If the requested quantity exceeds inventory, clearly say that it cannot be fulfilled.
+- If the product is out of stock, clearly say it is out of stock.
+- Give a concise natural-language answer in 1-2 sentences.
 """
 
     response = client.chat.completions.create(
         model="openai/gpt-oss-20b",
         messages=[
-            {
-                "role": "system",
-                "content": "You are a concise Shopify product assistant."
-            },
             {
                 "role": "user",
                 "content": prompt
@@ -40,18 +48,4 @@ Rules:
         temperature=0
     )
 
-    return response.choices[0].message.content
-
-
-if __name__ == "__main__":
-    answer = generate_answer(
-        "What is the price of the Complete Snowboard?",
-        {
-            "product": "The Complete Snowboard",
-            "variant": "Ice",
-            "price": "699.95",
-            "inventory": 10
-        }
-    )
-
-    print(answer)
+    return response.choices[0].message.content.strip()
