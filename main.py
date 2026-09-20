@@ -6,7 +6,8 @@ from sentence_transformers import SentenceTransformer
 
 from pricing import compute_price, check_inventory
 from llm import generate_answer
-
+from voice_input import listen
+from tts import speak
 
 def load_rag_documents():
     with open("rag_documents.json", "r", encoding="utf-8") as file:
@@ -76,15 +77,36 @@ def build_verified_product_info(result, quantity):
     discount_percent = 0
     minimum_quantity = 1
 
-    # Current active Shopify discount:
-    # 30% off The Complete Snowboard - Ice
-    # Minimum quantity: 3
-    if (
-        result["product"] == "The Complete Snowboard"
-        and result["variant"] == "Ice"
-    ):
-        discount_percent = 30
-        minimum_quantity = 3
+    try:
+        with open("discounts.json", "r", encoding="utf-8") as file:
+            discounts = json.load(file)
+    
+        for discount in discounts:
+            if discount["status"] != "ACTIVE":
+                continue
+    
+            summary = discount.get("summary") or ""
+    
+            if (
+                result["product"] in summary
+                and result["variant"] in summary
+            ):
+                percent_match = re.search(r"(\d+)%", summary)
+                quantity_match = re.search(
+                    r"Minimum quantity of (\d+)",
+                    summary
+                )
+    
+                if percent_match:
+                    discount_percent = int(percent_match.group(1))
+    
+                if quantity_match:
+                    minimum_quantity = int(quantity_match.group(1))
+    
+                break
+    
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
 
     pricing = compute_price(
         base_price,
@@ -126,8 +148,17 @@ def main():
     print("Type 'exit' to quit.\n")
 
     while True:
-        question = input("You: ").strip()
+        mode = input("Choose mode (text/voice/exit): ").strip().lower()
+        if mode == "exit":
+            print("Goodbye!")
+            break
 
+        if mode == "voice":
+            question = listen()
+            print("You:", question)
+        else:
+            question = input("You: ").strip()
+        
         if question.lower() == "exit":
             print("Goodbye!")
             break
@@ -175,6 +206,8 @@ def main():
         )
 
         print("Assistant:", answer)
+        if mode == "voice":
+            speak(answer)
         print()
 
 

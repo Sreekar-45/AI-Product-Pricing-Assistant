@@ -1,0 +1,37 @@
+[
+    {
+        "id": "gid://shopify/DiscountCodeNode/1405226975395",
+        "title": "CODE_DISCOUNT_BLACKFRIDAY",
+        "type": "DiscountCodeBasic",
+        "status": "SCHEDULED",
+        "summary": "80% off one-time purchase products \u2022 Minimum quantity of 1"
+    },
+    {
+        "id": "gid://shopify/DiscountCodeNode/1405227008163",
+        "title": null,
+        "type": "DiscountCodeFreeShipping",
+        "status": null,
+        "summary": null
+    },
+    {
+        "id": "gid://shopify/DiscountAutomaticNode/1405227106467",
+        "title": "Buy one, get the second 10 percent off",
+        "type": "DiscountAutomaticBxgy",
+        "status": "SCHEDULED",
+        "summary": "Buy 1 item, get 1 item at 10% off"
+    },
+    {
+        "id": "gid://shopify/DiscountCodeNode/1405227139235",
+        "title": "CODE_BXGY_DISCOUNT_SUMMERBOGO",
+        "type": "DiscountCodeBxgy",
+        "status": "SCHEDULED",
+        "summary": "Buy 1 item, get 1 item free \u2022 One use per customer"
+    },
+    {
+        "id": "gid://shopify/DiscountAutomaticNode/1405227172003",
+        "title": "Buy three, get 30 percent off",
+        "type": "DiscountAutomaticBasic",
+        "status": "ACTIVE",
+        "summary": "30% off The Complete Snowboard (Ice) \u2022 Minimum quantity of 3"
+    }
+]

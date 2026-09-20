@@ -135,21 +135,30 @@ def get_discounts(access_token):
     if "errors" in result:
         print("Shopify discount API error:")
         print(result["errors"])
-        return
+        return []
 
     discounts = result["data"]["discountNodes"]["nodes"]
 
-    print(f"\nFound {len(discounts)} discounts:\n")
+    discount_data = []
 
     for node in discounts:
         discount = node["discount"]
 
         if discount:
-            print("Discount:", discount.get("title"))
-            print("Type:", discount.get("__typename"))
-            print("Status:", discount.get("status"))
-            print("Summary:", discount.get("summary"))
-            print("-" * 50)
+            discount_data.append({
+                "id": node["id"],
+                "title": discount.get("title"),
+                "type": discount.get("__typename"),
+                "status": discount.get("status"),
+                "summary": discount.get("summary")
+            })
+
+    with open("discounts.json", "w", encoding="utf-8") as file:
+        json.dump(discount_data, file, indent=4)
+
+    print(f"Saved {len(discount_data)} discounts to discounts.json")
+
+    return discount_data
 
 
 if __name__ == "__main__":
